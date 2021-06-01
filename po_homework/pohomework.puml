@@ -24,6 +24,6 @@ add_department-> contact: 跳转到通讯录页面
 contact -> contact: 检查添加部门是否成功
 import_contact-> import_contact: 上传文件
 import_contact-> contact: 跳转到通讯录页面
-contact -> contact: 添加上传文件是否成功
+contact -> contact: 添加上传文件是否成功!
 
 @enduml
