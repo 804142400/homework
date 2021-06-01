@@ -1,0 +1,29 @@
+@startuml
+'https://plantuml.com/sequence-diagram
+
+autonumber
+
+participant 企业微信主页面 as main
+participant 添加成员页面 as add_member
+participant 通讯录页面 as contact
+participant 添加部门页面 as add_department
+participant 导入通讯录页面 as import_contact
+
+
+
+main -> add_member: 跳转到添加\n成员页面
+main -> contact: 跳转到通讯录页面
+main -> import_contact: 跳转到导入通讯录页面
+add_member -> add_member: 添加成员操作，点击保存
+add_member -> contact: 跳转到通讯录页面
+contact -> contact: 添加成员\n检查是否成功
+contact -> add_member: 跳转到添加\n成员页面
+contact-> add_department: 跳转到添加\n部门页面
+add_department-> add_department: 添加部门
+add_department-> contact: 跳转到通讯录页面
+contact -> contact: 检查添加部门是否成功
+import_contact-> import_contact: 上传文件
+import_contact-> contact: 跳转到通讯录页面
+contact -> contact: 添加上传文件是否成功
+
+@enduml
